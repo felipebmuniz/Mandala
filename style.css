@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  span {
+    display: block;
+    height: 20em;
+    left: calc(50% - 10em);
+    position: absolute;
+    top: calc(50% - 10em);
+    width: 20em;
+  }
+  
+  .large-circles {
+    animation: spin 10s linear infinite;
+  }
+  
+  .small-shapes {
+    animation: spin 30s linear infinite;
+  }
+  
+  .content-squircle {
+    animation: spin 30s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  .circle,
+  .squircle {
+    border-top: 0.1em solid rgba(255, 255, 255, 0.4);
+    height: 12.5em;
+    position: absolute;
+    width: 12.5em;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
+    left: calc(50% - 6.25em);
+    top: calc(50% - 12.5em);
+    transform-origin: 50% 12.5em;
+  }
+  
+  .one {
+    background-image: url(./img/amg.jpg);
+    background-position: center;
+    background-size: 100%;
+    transform: rotateZ(225deg);
+  }
+  
+  .two {
+    background-image: url(./img/cr.jpg);
+    background-position: center;
+    background-size: 100%;
+    transform: rotateZ(180deg);
+  }
+  
+  .three {
+    background-image: url(./img/esp.jpg);
+    background-position: center;
+    background-size: 100%;
+    transform: rotateZ(135deg);
+  }
+  
+  .four {
+    background-image: url(./img/est.jfif);
+    background-position: center;
+    background-size: 100%;
+    transform: rotateZ(90deg);
+  }
+  
+  .five {
+    background-image: url(./img/fm.jpg);
+    background-position: center;
+    background-size: 100%;
+    transform: rotateZ(45deg);
+  }
+  
+  .six {
+    background-image: url(./img/life.png);
+    background-position: center;
+    background-size: 100%;
+    transform: rotateZ(0);
+  }
+  
+  .seven {
+    background-image: url(img/nm.jpg);
+    background-position: center;
+    background-size: 100%;
+    transform: rotateZ(-45deg);
+  }
+  
+  .eight {
+    background-image: url(./img/tr.png);
+    background-position: center;
+    background-size: 100%;
+    transform: rotateZ(-90deg);
+  }
+  
+  .small {
+    width: 4em;
+    height: 4em;
+    left: calc(50% - 2em);
+    top: calc(50% - 15em);
+    transform-origin: 50% 15em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+  }
+  
+  .small.squircle {
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .small.squircle::after {
+    background: red;
+    border-radius: 25%;
+    box-shadow: -0.25em 0.25em 0.5em rgba(0, 0, 0, 0.2);
+    content: "";
+    height: 100%;
+    position: absolute;
+    transform: rotateZ(-45deg);
+    width: 100%;
+  }
+  
+  .small.squircle.two::after {
+    background-image: url(./img/cr.jpg);
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .small.squircle.four::after {
+    background-image: url(./img/est.jfif);
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .small.squircle.six::after {
+    background-image: url(./img/life.png);
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .small.squircle.eight::after {
+    background-image: url(./img/tr.png);
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .large.squircle {
+    background: rgba(30, 7, 66, 0.15);
+    border: none;
+    height: 15em;
+    width: 15em;
+    left: calc(50% - 7.5em);
+    position: absolute;
+    top: calc(50% - 7.5em);
+    transform: none;
+    border-radius: 2em;
+    border-bottom: 2em;
+  }
